@@ -1,15 +1,33 @@
 .container {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.5rem 5fr 1fr;
+  width: 100vw; /* Set to fill the viewport right now but when placed in a container, will be set to fill 100% instead*/
+  height: 100vh; /* Same as width */
 
-  font-size: 14px;
+  --top-bar-height: 1.5rem;
+  --controls-section-height: 8rem;
+  --main-video-viewport-height: calc(
+    100vh - (var(--top-bar-height) + var(--controls-section-height))
+  );
 }
 
 .top-bar,
 .main-video-viewport,
 .controls-section {
   border: 1px solid gray;
+}
+
+.top-bar {
+  width: inherit;
+  height: var(--top-bar-height);
+}
+
+.main-video-viewport {
+  width: inherit;
+  height: var(--main-video-viewport-height);
+  background-color: lightsteelblue;
+}
+
+.controls-section {
+  width: inherit;
+  height: var(--controls-section-height);
+  background-color: lightgoldenrodyellow;
 }

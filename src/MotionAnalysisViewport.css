@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5rem 5fr 1fr;
+
+  font-size: 14px;
+}
+
+.top-bar,
+.main-video-viewport,
+.controls-section {
+  border: 1px solid gray;
+}

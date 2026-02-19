@@ -1,5 +1,4 @@
 import './MotionAnalysisViewport.css';
-import video from '../assets/Jonielle Smith 60m.mp4';
 
 function MotionAnalysisViewport() {
   return (

@@ -3,11 +3,9 @@
   height: 100vh; /* Same as width */
 
   --top-bar-height: 1.5rem;
-  --controls-section-height: 8rem;
-  --main-video-viewport-height: calc(
-    100vh - (var(--top-bar-height) + var(--controls-section-height))
-  );
-}
+  --controls-section-height: 10rem;
+  --main-video-viewport-height: calc(100vh - (var(--top-bar-height) + var(--controls-section-height)));
+  }
 
 .top-bar,
 .main-video-viewport,
@@ -23,11 +21,20 @@
 .main-video-viewport {
   width: inherit;
   height: var(--main-video-viewport-height);
-  background-color: lightsteelblue;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .controls-section {
   width: inherit;
-  height: var(--controls-section-height);
-  background-color: lightgoldenrodyellow;
+  max-height: var(--controls-section-height);
 }
+
+
+video {
+  height: 99%; /* This allows the video to scale with the window */
+}
+
